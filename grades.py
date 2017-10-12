@@ -23,7 +23,7 @@ with open(grade_scope_grade_file) as csvDataFile:
     csvDataFile.readline() # Ignore header row in CSV
     for row in csvReader:
         # map student id to grade
-        grade_dict[row[1]] = row[3] if row[3] != '' else 'Grade not found'
+        grade_dict[row[1]] = row[3] if row[3] != '' else '0'
 
 csvDataFile.close()
 
@@ -34,6 +34,6 @@ for line in order:
     if student_id in grade_dict:
         output_grades.write(grade_dict[student_id] + '\n')
     else:
-        output_grades.write("Student ID not found\n")
+        output_grades.write("0\n")
 
 output_grades.close()
