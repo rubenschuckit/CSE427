@@ -9,7 +9,7 @@ import sys
 import os
 
 if len(sys.argv) != 5:
-    print("Usage: extra_credit.py inDir outFile ")
+    print("Usage: extra_credit.py <hw number> <root directory> <output file> <order file with wustl keys>")
     sys.exit()
 
 hw_num = sys.argv[1]
