@@ -30,9 +30,9 @@ csvDataFile.close()
 order = open(order_file)
 output_grades = open(output_file, "w")
 for line in order:
-    student_id = line.replace('\n', '')
-    if student_id in grade_dict:
-        output_grades.write(grade_dict[student_id] + '\n')
+    wustl_key = line.replace('\n', '')
+    if wustl_key in grade_dict:
+        output_grades.write(grade_dict[wustl_key] + '\n')
     else:
         output_grades.write("0\n")
 
